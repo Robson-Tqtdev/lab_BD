@@ -258,11 +258,11 @@ AutoPecas-Conecta/
 
 👥 Equipe
 
-Isacc Victor
-Robson Torquato da Silva
-Ricardo Saboia
-Pedro Lucas
-Thiago Souza Santos
+Isacc Victor;
+Robson Torquato da Silva;
+Ricardo Saboia;
+Pedro Lucas;
+Thiago Souza Santos;
 
 Orientador
 
