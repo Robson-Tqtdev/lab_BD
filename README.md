@@ -2,14 +2,17 @@
 Atividade de banco de dados
 
 🚗Auto Peças Conecta
+
 Sistema de Banco de Dados para gerenciamento de autopeças e serviços mecânicos.
 
 📖 Sobre o projeto
+
 O AutoPeças Conecta é um projeto acadêmico de banco de dados desenvolvido para representar as principais operações de uma empresa de autopeças que também presta serviços mecânicos.
 A proposta central é integrar informações de clientes, veículos, peças, estoque, vendas, ordens de serviço, mecânicos e serviços, permitindo maior organização e rastreabilidade das operações.
 O banco foi estruturado utilizando o modelo relacional e preparado para implementação no MySQL.
 
 🎯 Problema
+
 Uma empresa de autopeças precisa controlar diversas informações simultaneamente, como:
 
 Quais peças estão disponíveis;
@@ -24,7 +27,9 @@ Histórico dos atendimentos realizados.
 A ausência desse controle pode ocasionar erros de compatibilidade, divergências de estoque, dificuldade na localização das peças e perda do histórico dos atendimentos.
 
 💡 Solução proposta
+
 O AutoPeças Conecta centraliza essas informações em um banco de dados relacional, utilizando relacionamentos, chaves primárias, chaves estrangeiras e restrições de integridade.
+
 O sistema permite controlar:
 
 CLIENTES
@@ -45,17 +50,21 @@ CLIENTES
 ⚙️ Principais funcionalidades
 
 👤 Clientes
+
 Cadastro de clientes;
+
 Diferenciação entre Pessoa Física e Pessoa Jurídica;
 Cadastro de múltiplos telefones;
 Cadastro de endereço completo.
 
 🚗 Veículos
+
 Cadastro de veículos;
 Associação entre veículo e proprietário;
 Associação com modelo do veículo.
 
 🔧 Peças
+
 Cadastro de peças;
 Código de barras;
 Descrição;
@@ -64,6 +73,7 @@ Unidade de medida;
 Compatibilidade com modelos de veículos.
 
 📦 Estoque
+
 Controle de estoque;
 Depósitos;
 Prateleiras;
@@ -71,6 +81,7 @@ Quantidade disponível;
 Localização física das peças.
 
 💰 Vendas
+
 Registro de vendas;
 Forma de pagamento;
 Itens vendidos;
@@ -79,6 +90,7 @@ Preço unitário;
 Total da venda.
 
 🛠️ Ordens de Serviço
+
 Registro de atendimentos;
 Veículo atendido;
 Peças utilizadas;
@@ -88,6 +100,7 @@ Horas trabalhadas;
 Valor cobrado.
 
 🗃️ Estrutura do banco
+
 O modelo lógico possui relações para representar:
 
 Tabela	Finalidade
@@ -111,22 +124,33 @@ VENDA	Vendas realizadas
 ITEM_VENDA	Itens das vendas
 
 🔗 Principais relacionamentos
+
 O projeto possui diferentes tipos de relacionamentos.
 
 Relacionamento N
+
 PEÇA ↔ MODELO_VEICULO
+
 Uma peça pode ser compatível com vários modelos, enquanto um modelo pode utilizar várias peças.
+
 Esse relacionamento é representado pela tabela:
+
 PECA_MODELO
 
 Relacionamento N
+
 ORDEM_SERVICO ↔ PECA
+
 Uma ordem de serviço pode utilizar várias peças e uma peça pode aparecer em várias ordens.
+
 Esse relacionamento é representado por:
+
 ITEM_OS
 
 Relacionamento ternário
+
 O projeto também possui o relacionamento:
+
 ORDEM_SERVICO
        │
        ├──── SERVICO_PRESTADO ──── MECANICO
@@ -136,6 +160,7 @@ ORDEM_SERVICO
 Esse relacionamento permite registrar qual mecânico executou qual serviço em determinada ordem de serviço, além das horas trabalhadas e do valor cobrado.
 
 🧩 Conceitos de modelagem utilizados
+
 O projeto contempla conceitos importantes de Banco de Dados:
 
 Entidades fortes;
@@ -162,22 +187,31 @@ Modelo Relacional
 A implementação física utiliza InnoDB, utf8mb4, chaves estrangeiras, CHECK, ENUM e tipos como DECIMAL, VARCHAR, DATETIME e INT AUTO_INCREMENT.
 
 ▶️ Como executar
+
 1. Instale o MySQL
+
 É necessário possuir uma versão compatível do MySQL instalada.
 
 2. Crie ou abra o banco
+
 O projeto utiliza o banco:
+
 auto_pecas_db
 
 4. Execute o script SQL
+
 No MySQL Workbench ou outra ferramenta compatível:
+
 SOURCE caminho/do/script.sql;
 
 5. Verifique as tabelas
+
 Após a execução, o banco deverá possuir as tabelas necessárias para o funcionamento do sistema.
+
 O documento do projeto prevê a confirmação da criação do banco auto_pecas_db e das 18 tabelas.
 
 🧪 Testes
+
 Foram previstos testes para verificar:
 
 Criação do banco;
@@ -193,6 +227,7 @@ Bloqueio de quantidades negativas;
 Integridade entre cliente e veículo.
 
 📊 Consultas disponíveis
+
 O projeto contempla consultas para:
 
 Listagem de ordens de serviço;
@@ -202,6 +237,7 @@ Relatório de OS, mecânico e serviço;
 Cálculo dos totais das vendas.
 
 📁 Estrutura sugerida do repositório
+
 AutoPecas-Conecta/
 │
 ├── README.md
@@ -221,6 +257,7 @@ AutoPecas-Conecta/
     └── consultas.sql
 
 👥 Equipe
+
 Isacc Victor
 Robson Torquato da Silva
 Ricardo Saboia
@@ -228,16 +265,21 @@ Pedro Lucas
 Thiago Souza Santos
 
 Orientador
+
 Jefferson Salomão
 
 Curso
+
 Engenharia de Software
 
 Disciplina
+
 Laboratório de Banco de Dados
 
 📌 Status do projeto
+
 Concluído para fins acadêmicos.
+
 O modelo foi estruturado para representar as operações principais de uma autopeças com serviços mecânicos, contemplando modelagem conceitual, lógica e física, regras de integridade, dados de teste e consultas.
 
 📚 Documentação
