@@ -1,8 +1,4 @@
--- ============================================================
 -- AUTOPECAS CONECTA
--- Modelo fisico para MySQL 8.0.16 ou superior
--- ATENCAO: o bloco DROP TABLE recria as tabelas do projeto.
--- ============================================================
 
 CREATE DATABASE IF NOT EXISTS auto_pecas_db
     CHARACTER SET utf8mb4
@@ -247,9 +243,7 @@ CREATE TABLE item_venda (
         FOREIGN KEY (id_peca) REFERENCES peca(id_peca)
 );
 
--- ============================================================
 -- DADOS DE TESTE
--- ============================================================
 
 INSERT INTO cliente
     (id_cliente, nome, rua, numero, bairro, cidade, estado, cep, tipo_cliente)
@@ -342,9 +336,8 @@ INSERT INTO item_venda
 VALUES
     (1, 1, 2, 45.00);
 
--- ============================================================
 -- CONSULTAS E ATUALIZACOES DE EXEMPLO
--- ============================================================
+
 
 -- 1. Ordens de servico com cliente e veiculo.
 SELECT
