@@ -1,19 +1,15 @@
 # lab_BD
 Atividade de banco de dados
-Auto Peças Conecta
 
+🚗Auto Peças Conecta
 Sistema de Banco de Dados para gerenciamento de autopeças e serviços mecânicos.
 
 📖 Sobre o projeto
-
 O AutoPeças Conecta é um projeto acadêmico de banco de dados desenvolvido para representar as principais operações de uma empresa de autopeças que também presta serviços mecânicos.
-
 A proposta central é integrar informações de clientes, veículos, peças, estoque, vendas, ordens de serviço, mecânicos e serviços, permitindo maior organização e rastreabilidade das operações.
-
 O banco foi estruturado utilizando o modelo relacional e preparado para implementação no MySQL.
 
 🎯 Problema
-
 Uma empresa de autopeças precisa controlar diversas informações simultaneamente, como:
 
 Quais peças estão disponíveis;
@@ -28,9 +24,7 @@ Histórico dos atendimentos realizados.
 A ausência desse controle pode ocasionar erros de compatibilidade, divergências de estoque, dificuldade na localização das peças e perda do histórico dos atendimentos.
 
 💡 Solução proposta
-
 O AutoPeças Conecta centraliza essas informações em um banco de dados relacional, utilizando relacionamentos, chaves primárias, chaves estrangeiras e restrições de integridade.
-
 O sistema permite controlar:
 
 CLIENTES
